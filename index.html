@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-dim": "#cbdbf5",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "secondary": "#565e74",
+          "inverse-primary": "#b7c4ff",
+          "on-secondary": "#ffffff",
+          "primary": "#0037b0",
+          "inverse-surface": "#213145",
+          "surface-container-lowest": "#ffffff",
+          "surface-container": "#e5eeff",
+          "tertiary": "#004870",
+          "outline": "#747686",
+          "secondary-fixed-dim": "#bec6e0",
+          "surface-tint": "#2151da",
+          "on-surface-variant": "#434655",
+          "on-primary": "#ffffff",
+          "surface-container-highest": "#d3e4fe",
+          "surface-bright": "#f8f9ff",
+          "on-tertiary-container": "#b2d9ff",
+          "tertiary-fixed-dim": "#93ccff",
+          "on-primary-fixed-variant": "#0039b5",
+          "on-tertiary-fixed-variant": "#004b73",
+          "secondary-container": "#dae2fd",
+          "primary-fixed-dim": "#b7c4ff",
+          "primary-fixed": "#dce1ff",
+          "background": "#f8f9ff",
+          "tertiary-fixed": "#cce5ff",
+          "on-secondary-container": "#5c647a",
+          "secondary-fixed": "#dae2fd",
+          "on-tertiary-fixed": "#001d31",
+          "on-surface": "#0b1c30",
+          "on-error-container": "#93000a",
+          "surface-container-high": "#dce9ff",
+          "surface": "#f8f9ff",
+          "primary-container": "#1d4ed8",
+          "on-primary-fixed": "#001551",
+          "surface-variant": "#d3e4fe",
+          "inverse-on-surface": "#eaf1ff",
+          "on-secondary-fixed": "#131b2e",
+          "outline-variant": "#c4c5d7",
+          "on-primary-container": "#cad3ff",
+          "on-secondary-fixed-variant": "#3f465c",
+          "on-background": "#0b1c30",
+          "surface-container-low": "#eff4ff",
+          "on-tertiary": "#ffffff",
+          "error-container": "#ffdad6",
+          "tertiary-container": "#006194"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1rem",
+          "space-xl": "1.5rem",
+          "margin-tablet": "1.5rem",
+          "margin": "1rem",
+          "space-2xl": "2rem",
+          "margin-desktop": "2rem",
+          "space-lg": "1rem",
+          "space-sm": "0.5rem",
+          "space-3xl": "3rem",
+          "space-md": "0.75rem",
+          "space-xs": "0.25rem",
+          "gutter-desktop": "1.5rem"
+        },
+        "fontFamily": {
+          "data-metric": ["JetBrains Mono"],
+          "body-lg": ["Public Sans"],
+          "headline-sm": ["Public Sans"],
+          "headline-lg": ["Public Sans"],
+          "body-sm": ["Public Sans"],
+          "data-telemetry": ["JetBrains Mono"],
+          "label-action": ["Public Sans"],
+          "display-hero-mobile": ["Public Sans"],
+          "body-base": ["Public Sans"],
+          "display-hero": ["Public Sans"],
+          "title-card": ["Public Sans"],
+          "headline-md": ["Public Sans"],
+          "headline-lg-mobile": ["Public Sans"],
+          "label-badge": ["Public Sans"]
+        },
+        "fontSize": {
+          "data-metric": ["1.625rem", {"lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "body-lg": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-sm": ["1.125rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+          "headline-lg": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "body-sm": ["0.8125rem", {"lineHeight": "1.25rem", "letterSpacing": "0.005em", "fontWeight": "400"}],
+          "data-telemetry": ["0.8125rem", {"lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "500"}],
+          "label-action": ["0.8125rem", {"lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "display-hero-mobile": ["1.875rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "body-base": ["0.875rem", {"lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400"}],
+          "display-hero": ["2.5rem", {"lineHeight": "3rem", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+          "title-card": ["0.9375rem", {"lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "600"}],
+          "headline-md": ["1.25rem", {"lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+          "label-badge": ["0.6875rem", {"lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "700"}]
+        }
+      }
+    }
+  }
+</script></head><body class="bg-[#f8fafc] font-body-base text-[#0f172a] antialiased selection:bg-blue-100 selection:text-blue-900 min-h-screen"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm flex items-center justify-between px-6"><div class="flex items-center gap-4"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-blue-700 flex items-center justify-center text-white shadow-sm"><span class="material-symbols-outlined text-xl">shield</span></div><div class="flex flex-col"><span class="font-bold text-sm tracking-tight text-slate-900 uppercase">RAHAT SETU COMMAND CONTROL</span><span class="text-xs text-slate-500 font-medium">Event Incident &amp; Relief Network</span></div></div><div class="h-6 w-px bg-slate-200 hidden xl:block"></div><div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-200"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="text-xs font-semibold text-slate-700">Maha Kumbh 2025 · Prayagraj Sector 4 Central</span><span class="text-[11px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 uppercase font-bold tracking-wide">Live</span></div></div><div class="flex items-center gap-4"><div class="hidden 2xl:flex items-center gap-4 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200"><div class="flex flex-col"><span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Total On-Site</span><span class="font-data-telemetry text-xs text-blue-700 font-bold">248,500</span></div><div class="h-5 w-px bg-slate-200"></div><div class="flex flex-col"><span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">System Health</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span class="font-data-telemetry text-xs text-emerald-700 font-semibold">Nominal (99.8%)</span></div></div></div><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-600 hover:text-white transition-colors shadow-xs" type="button"><span class="material-symbols-outlined text-sm">podcasts</span><span class="text-xs uppercase font-bold tracking-wider">Emergency Broadcast</span></button><div class="flex items-center gap-3 pl-3 border-l border-slate-200"><div class="hidden md:flex flex-col text-right"><span class="text-xs text-slate-900 font-bold leading-tight">Rajesh Malhotra</span><span class="text-[11px] text-slate-500 font-medium">Sector Lead</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-blue-700/20" src="https://lh3.googleusercontent.com/aida/AEtjO1XJ9Wy3RuIXJJibyGx5FZy1_5ZCv5igj3ru2pKNYvdxuMgPM2B9zBChT2HXwf8SLcO4F96so1nOiyqLNq1Q0CMSYH0_La2vRspkL63lhFkg8JhMR36dpBxcWtdmTPTABo1npcHykdnnb-ZOoHhnVrCR2mJMmiTajGp1jGriCvquOnYiCION1Sgtp_5QOqgou_0mZOzlyTFWVv-Ndc_41ePZJhlwn1lm-UhS9CB5mLS6vqi2qxsBspcLWQI"/></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-white z-40 flex flex-col justify-between p-4 border-r border-slate-200"><div class="flex flex-col gap-3"><div class="px-2 py-1"><span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Tactical Modules</span></div><nav class="flex flex-col gap-1"><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group bg-blue-50 text-blue-700 font-semibold border border-blue-200 shadow-xs" data-path="live-density-and-flow" href="#"><span class="material-symbols-outlined text-xl text-blue-700">hub</span><span class="text-sm">Live Density &amp; Flow</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-all group" data-path="venue-layout-and-poi-gis" href="#"><span class="material-symbols-outlined text-xl group-hover:text-blue-700 transition-colors">map</span><span class="text-sm">Venue Layout &amp; POI GIS</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-all group" data-path="medical-and-rapid-dispatch" href="#"><span class="material-symbols-outlined text-xl group-hover:text-blue-700 transition-colors">emergency</span><span class="text-sm">Medical &amp; Rapid Dispatch</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-all group" data-path="lost-persons-and-ai-vision" href="#"><span class="material-symbols-outlined text-xl group-hover:text-blue-700 transition-colors">person_search</span><span class="text-sm">Lost Persons &amp; AI Vision</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-all group" data-path="route-analytics-and-overrides" href="#"><span class="material-symbols-outlined text-xl group-hover:text-blue-700 transition-colors">alt_route</span><span class="text-sm">Route Analytics &amp; Overrides</span></a></nav></div><div class="flex flex-col gap-2 p-3 rounded-lg bg-slate-50 border border-slate-200"><div class="flex items-center justify-between"><span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Sector Mesh Net</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div><div class="flex items-center justify-between text-xs"><span class="text-slate-500">Active Nodes</span><span class="font-data-telemetry font-bold text-slate-800">142 / 142</span></div><div class="flex items-center justify-between text-xs"><span class="text-slate-500">Telemetry Lag</span><span class="font-data-telemetry font-bold text-emerald-600">12ms</span></div></div></aside><div class="pl-64"><main class="relative pt-16 min-h-screen bg-[#f8fafc] w-full px-6 py-6"><div class="flex flex-col w-full gap-5">
+<!-- Prominent Header Summary -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<h1 class="text-xl font-bold text-slate-900 tracking-tight">Real-Time Crowd Density &amp; Flow Monitoring</h1>
+</div>
+<p class="text-sm text-slate-500 mt-1">Live headcounts, sector crowding levels, and AI bottleneck predictions for Sector 4 Central.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">update</span>
+<span>Auto-refresh: 1s</span>
+</div>
+<div class="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>High Precision (68 AI Nodes)</span>
+</div>
+</div>
+</div>
+<!-- Friendly First-Glance Density & Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+<!-- Metric 1 -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-slate-300 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Total Attendees in Sector</span>
+<span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">trending_up</span>
++1.2%
+</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-data-metric text-2xl font-bold text-slate-900 tracking-tight">248,500</span>
+<span class="text-xs text-slate-400 font-medium">heads monitored</span>
+</div>
+<div class="mt-2 text-xs font-semibold text-emerald-700 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>Well within safety limits</span>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+<span>Optical lock rate</span>
+<span class="font-data-telemetry font-bold text-slate-700">98.4%</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-slate-300 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Peak Density</span>
+<span class="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+Elevated
+</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-data-metric text-2xl font-bold text-amber-600 tracking-tight">3.4</span>
+<span class="text-xs text-slate-500 font-medium">persons / m²</span>
+<span class="ml-auto text-xs text-slate-400">Limit: 4.5</span>
+</div>
+<div class="mt-2 text-xs font-medium text-amber-800">
+Moderate congestion in central spine
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 w-full">
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 75.5%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-slate-300 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Crowd Speed</span>
+<span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">check</span>
+Fluid
+</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-data-metric text-2xl font-bold text-emerald-700 tracking-tight">1.15</span>
+<span class="text-xs text-slate-500 font-medium">m / s</span>
+<span class="ml-auto text-xs text-slate-400">Pace: Steady</span>
+</div>
+<div class="mt-2 text-xs font-semibold text-emerald-700 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">directions_walk</span>
+<span>Normal walking pace</span>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+<span>Stall delay index</span>
+<span class="font-data-telemetry font-bold text-emerald-600">0.04 (Negligible)</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:border-slate-300 transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">High Density Zones</span>
+<span class="inline-flex items-center gap-1 text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded-full">
+Action Advised
+</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-data-metric text-2xl font-bold text-rose-600 tracking-tight">2</span>
+<span class="text-xs text-slate-500 font-medium">of 14 sectors</span>
+<span class="ml-auto text-xs font-semibold text-slate-700">Rajmarg &amp; Annapurna</span>
+</div>
+<div class="mt-2 text-xs font-medium text-rose-700">
+Bottleneck pacing diversion in effect
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+<span>Mitigation status</span>
+<span class="font-data-telemetry font-bold text-amber-600">Active Monitoring</span>
+</div>
+</div>
+</div>
+<!-- Middle Section: GIS Canvas and Capacity Breakdown -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+<!-- GIS Density Canvas (Clean Light Background) -->
+<div class="lg:col-span-8 flex flex-col gap-4 bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="text-base font-bold text-slate-900">Crowd Density Vector &amp; GIS Canvas</h2>
+<span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">Real-time dynamic flow vector field calibrated via 68 Optical AI clusters</p>
+</div>
+<div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
+<button class="filter-btn px-3 py-1 rounded text-xs font-semibold bg-white text-blue-700 shadow-xs transition-all" type="button">All Sectors</button>
+<button class="filter-btn px-3 py-1 rounded text-xs font-medium text-slate-600 hover:text-slate-900 transition-all" type="button">Sangam Ghats</button>
+<button class="filter-btn px-3 py-1 rounded text-xs font-medium text-slate-600 hover:text-slate-900 transition-all" type="button">Food &amp; Rest</button>
+<button class="filter-btn px-3 py-1 rounded text-xs font-medium text-slate-600 hover:text-slate-900 transition-all" type="button">Entry / Exit</button>
+</div>
+</div>
+<!-- Canvas Area -->
+<div class="relative w-full h-[520px] rounded-lg bg-slate-50 border border-slate-200 overflow-hidden flex items-center justify-center select-none shadow-inner">
+<!-- Subtle Map Grid -->
+<div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="50%" cy="50%" id="heatHigh" r="50%">
+<stop offset="0%" stop-color="#ef4444" stop-opacity="0.55"></stop>
+<stop offset="40%" stop-color="#f59e0b" stop-opacity="0.35"></stop>
+<stop offset="70%" stop-color="#fbbf24" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#f8fafc" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="heatMid" r="50%">
+<stop offset="0%" stop-color="#f59e0b" stop-opacity="0.5"></stop>
+<stop offset="45%" stop-color="#fbbf24" stop-opacity="0.25"></stop>
+<stop offset="75%" stop-color="#10b981" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#f8fafc" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="heatSafe" r="50%">
+<stop offset="0%" stop-color="#10b981" stop-opacity="0.45"></stop>
+<stop offset="50%" stop-color="#34d399" stop-opacity="0.2"></stop>
+<stop offset="85%" stop-color="#60a5fa" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#f8fafc" stop-opacity="0"></stop>
+</radialgradient>
+<marker id="flowArrow" markerheight="5" markerwidth="5" orient="auto-start-reverse" refx="5" refy="5" viewbox="0 0 10 10">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#2563eb" opacity="0.9"></path>
+</marker>
+<marker id="flowArrowGreen" markerheight="5" markerwidth="5" orient="auto-start-reverse" refx="5" refy="5" viewbox="0 0 10 10">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#059669" opacity="0.9"></path>
+</marker>
+</defs>
+<!-- River water body -->
+<path d="M 0 520 Q 300 460, 600 500 T 1000 470 L 1000 600 L 0 600 Z" fill="#e0f2fe" opacity="0.9"></path>
+<path d="M 0 520 Q 300 460, 600 500 T 1000 470" fill="none" opacity="0.7" stroke="#0284c7" stroke-dasharray="6 4" stroke-width="2"></path>
+<text fill="#0369a1" font-family="Public Sans" font-size="12" font-weight="700" letter-spacing="2" opacity="0.85" x="650" y="565">HOLY SANGAM &amp; GANGES EMBANKMENT</text>
+<!-- Sector boundaries (crisp light layout) -->
+<polygon fill="#ffffff" points="100,50 470,50 430,250 60,230" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.5"></polygon>
+<polygon fill="#ffffff" points="510,50 930,70 890,260 480,240" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.5"></polygon>
+<polygon fill="#ffffff" points="60,250 430,270 390,480 40,440" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.5"></polygon>
+<polygon fill="#ffffff" points="460,265 950,285 900,490 430,470" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.5"></polygon>
+<!-- Soft Heat Spots -->
+<circle cx="270" cy="145" fill="url(#heatHigh)" r="150"></circle>
+<circle cx="670" cy="375" fill="url(#heatMid)" r="140"></circle>
+<circle cx="210" cy="360" fill="url(#heatSafe)" r="125"></circle>
+<circle cx="710" cy="155" fill="url(#heatSafe)" r="115"></circle>
+<!-- Dynamic Flow Arrows -->
+<path d="M 130 95 Q 210 115 270 145" fill="none" marker-end="url(#flowArrow)" opacity="0.85" stroke="#2563eb" stroke-dasharray="5 4" stroke-width="2.5"></path>
+<path d="M 270 145 Q 350 175 420 220" fill="none" marker-end="url(#flowArrow)" opacity="0.85" stroke="#2563eb" stroke-dasharray="5 4" stroke-width="2.5"></path>
+<path d="M 420 220 Q 520 250 600 300" fill="none" marker-end="url(#flowArrow)" opacity="0.9" stroke="#2563eb" stroke-dasharray="6 4" stroke-width="3"></path>
+<path d="M 600 300 Q 640 335 670 375" fill="none" marker-end="url(#flowArrow)" opacity="0.9" stroke="#2563eb" stroke-dasharray="6 4" stroke-width="3"></path>
+<path d="M 670 375 Q 740 415 820 455" fill="none" marker-end="url(#flowArrowGreen)" opacity="0.85" stroke="#059669" stroke-dasharray="5 4" stroke-width="2"></path>
+<path d="M 100 330 Q 160 345 210 360" fill="none" marker-end="url(#flowArrowGreen)" opacity="0.85" stroke="#059669" stroke-dasharray="5 4" stroke-width="2"></path>
+<!-- Hub marker dots -->
+<circle cx="270" cy="145" fill="#ef4444" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="670" cy="375" fill="#f59e0b" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="210" cy="360" fill="#10b981" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="710" cy="155" fill="#10b981" r="5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- Bright Sector Badges on Canvas -->
+<div class="absolute top-6 left-8 bg-white/95 border border-amber-300 shadow-sm backdrop-blur-sm px-3.5 py-2 rounded-lg flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-bold text-xs text-slate-900">Sector 4A · Rajmarg Central Spine</span>
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+</div>
+<span class="text-[11px] font-semibold text-amber-700">3.4 persons/m² · Heavy Compression (Active Surge)</span>
+</div>
+<div class="absolute top-10 right-16 bg-white/95 border border-emerald-300 shadow-sm backdrop-blur-sm px-3.5 py-2 rounded-lg flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-bold text-xs text-slate-900">Sector 4C · Triveni Marg Concourse</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<span class="text-[11px] font-semibold text-emerald-700">1.8 persons/m² · Free-Flow Stable</span>
+</div>
+<div class="absolute bottom-20 right-16 bg-white/95 border border-amber-300 shadow-sm backdrop-blur-sm px-3.5 py-2 rounded-lg flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-bold text-xs text-slate-900">Sector 4D · Annapurna Food Hub</span>
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+</div>
+<span class="text-[11px] font-semibold text-amber-700">3.1 persons/m² · Dense Ingress Gathering</span>
+</div>
+<div class="absolute bottom-20 left-10 bg-white/95 border border-emerald-300 shadow-sm backdrop-blur-sm px-3.5 py-2 rounded-lg flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-bold text-xs text-slate-900">Sector 4B · Sangam Ghats Promenade</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<span class="text-[11px] font-semibold text-emerald-700">1.2 persons/m² · Comfortable Flow Cadence</span>
+</div>
+<!-- Controls in Canvas -->
+<div class="absolute top-4 right-4 flex flex-col gap-1 bg-white p-1 rounded-lg border border-slate-200 shadow-sm">
+<button class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded transition-colors" title="Zoom in" type="button"><span class="material-symbols-outlined text-sm font-semibold">add</span></button>
+<button class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded transition-colors" title="Zoom out" type="button"><span class="material-symbols-outlined text-sm font-semibold">remove</span></button>
+<button class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded transition-colors" title="Recenter projection" type="button"><span class="material-symbols-outlined text-sm font-semibold">filter_center_focus</span></button>
+</div>
+<!-- Bottom Info Ribbon -->
+<div class="absolute bottom-3 left-4 flex items-center gap-3 bg-white/95 px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs text-xs text-slate-500 font-medium">
+<span>PRAYAGRAJ SECTOR 4 MESH</span>
+<span class="text-blue-700 font-bold">1:2500 TACTICAL GIS</span>
+</div>
+<!-- Clear Light Map Legend -->
+<div class="absolute bottom-3 right-4 flex items-center gap-2 bg-white/95 border border-slate-200 shadow-xs backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs">
+<span class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">LEGEND:</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span class="text-slate-700 font-medium">&lt; 1.5 p/m² Comfortable</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+<span class="text-slate-700 font-medium">2.0 - 3.5 p/m² Crowded</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+<span class="text-rose-700 font-medium">&gt; 3.5 p/m² Critical Bottleneck</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sector Capacity Breakdown with Simple Progress Bars & Percentages -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<h3 class="text-base font-bold text-slate-900">Sector Capacity Breakdown</h3>
+<span class="material-symbols-outlined text-slate-400 text-sm">info</span>
+</div>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Zone 4 Mesh</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Sector 4A -->
+<div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex flex-col gap-2 hover:bg-slate-100/70 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-bold text-sm text-slate-900">Sector 4A</span>
+<span class="text-xs text-slate-500 truncate">Rajmarg Central Spine</span>
+</div>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 uppercase">Amber Alert</span>
+</div>
+<div class="flex items-baseline justify-between mt-0.5">
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric text-xl font-bold text-slate-900">82%</span>
+<span class="text-xs text-slate-500 font-medium">capacity utilized</span>
+</div>
+<div class="text-xs font-semibold text-amber-700">
+3.4 <span class="text-slate-400 font-normal">p/m²</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 82%"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px] text-slate-500">
+<span>20m Trend (Rising)</span>
+<svg class="w-20 h-3 text-amber-600" fill="none" viewbox="0 0 100 20"><path d="M 0 16 L 20 14 L 40 15 L 60 10 L 80 8 L 100 3" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path></svg>
+</div>
+</div>
+<!-- Sector 4B -->
+<div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex flex-col gap-2 hover:bg-slate-100/70 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-bold text-sm text-slate-900">Sector 4B</span>
+<span class="text-xs text-slate-500 truncate">Sangam Ghats</span>
+</div>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase">Nominal</span>
+</div>
+<div class="flex items-baseline justify-between mt-0.5">
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric text-xl font-bold text-slate-900">54%</span>
+<span class="text-xs text-slate-500 font-medium">capacity utilized</span>
+</div>
+<div class="text-xs font-semibold text-emerald-700">
+1.2 <span class="text-slate-400 font-normal">p/m²</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 54%"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px] text-slate-500">
+<span>20m Trend (Steady)</span>
+<svg class="w-20 h-3 text-emerald-600" fill="none" viewbox="0 0 100 20"><path d="M 0 10 L 25 12 L 50 10 L 75 11 L 100 9" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path></svg>
+</div>
+</div>
+<!-- Sector 4C -->
+<div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex flex-col gap-2 hover:bg-slate-100/70 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-bold text-sm text-slate-900">Sector 4C</span>
+<span class="text-xs text-slate-500 truncate">Triveni Marg Concourse</span>
+</div>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase">Nominal</span>
+</div>
+<div class="flex items-baseline justify-between mt-0.5">
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric text-xl font-bold text-slate-900">41%</span>
+<span class="text-xs text-slate-500 font-medium">capacity utilized</span>
+</div>
+<div class="text-xs font-semibold text-emerald-700">
+0.9 <span class="text-slate-400 font-normal">p/m²</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 41%"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px] text-slate-500">
+<span>20m Trend (Ebbing)</span>
+<svg class="w-20 h-3 text-emerald-600" fill="none" viewbox="0 0 100 20"><path d="M 0 6 L 25 8 L 50 12 L 75 14 L 100 16" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path></svg>
+</div>
+</div>
+<!-- Sector 4D -->
+<div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex flex-col gap-2 hover:bg-slate-100/70 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-bold text-sm text-slate-900">Sector 4D</span>
+<span class="text-xs text-slate-500 truncate">Annapurna Food Hub</span>
+</div>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 uppercase">Surge Vector</span>
+</div>
+<div class="flex items-baseline justify-between mt-0.5">
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric text-xl font-bold text-slate-900">76%</span>
+<span class="text-xs text-slate-500 font-medium">capacity utilized</span>
+</div>
+<div class="text-xs font-semibold text-amber-700">
+3.1 <span class="text-slate-400 font-normal">p/m²</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 76%"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px] text-slate-500">
+<span>20m Trend (Surging)</span>
+<svg class="w-20 h-3 text-amber-600" fill="none" viewbox="0 0 100 20"><path d="M 0 18 L 30 16 L 60 11 L 80 8 L 100 4" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 30-Minute AI Bottleneck Forecast (Clean White Chart with Crisp Gridlines) -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-blue-50 text-blue-700 border border-blue-200">
+<span class="material-symbols-outlined text-xl">auto_graph</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="text-base font-bold text-slate-900">30-Minute AI Predictive Bottleneck Chart</h3>
+<span class="text-[11px] px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-bold uppercase border border-blue-200">Active Inference Engine</span>
+</div>
+<span class="text-xs text-slate-500">Projected density shift calculated via continuous fluid-dynamic crowd behavior modeling</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium text-slate-600">
+<span class="flex items-center gap-1.5"><span class="inline-block w-3 h-0.5 bg-slate-400"></span> Baseline Historical</span>
+<span class="flex items-center gap-1.5"><span class="inline-block w-3 h-0.5 bg-blue-600"></span> Predicted Surge Wave</span>
+<span class="flex items-center gap-1.5"><span class="inline-block w-3 h-0.5 bg-rose-500 border-b border-dashed border-rose-500"></span> Saturation Danger Mark</span>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-4 items-center">
+<div class="xl:col-span-3 bg-slate-50 p-4 rounded-xl border border-slate-200 flex flex-col gap-2">
+<!-- Clean Time Labels -->
+<div class="flex justify-between items-center text-xs font-semibold text-slate-500 px-2 border-b border-slate-200 pb-2">
+<span>Now (T+00)</span>
+<span>+5 min</span>
+<span>+10 min</span>
+<span class="text-amber-700 font-bold bg-amber-100 px-2 py-0.5 rounded">+15 min (Peak Fluid Surge)</span>
+<span>+20 min</span>
+<span>+25 min</span>
+<span>+30 min (Equilibrium)</span>
+</div>
+<!-- SVG Forecast Graph with Crisp Gridlines -->
+<div class="relative w-full h-32 select-none pt-2">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 800 100">
+<!-- Horizontal Gridlines -->
+<line opacity="0.6" stroke="#e2e8f0" stroke-width="1" x1="0" x2="800" y1="20" y2="20"></line>
+<line opacity="0.6" stroke="#e2e8f0" stroke-width="1" x1="0" x2="800" y1="45" y2="45"></line>
+<line opacity="0.6" stroke="#e2e8f0" stroke-width="1" x1="0" x2="800" y1="70" y2="70"></line>
+<!-- Danger Ceiling Line -->
+<line opacity="0.9" stroke="#f43f5e" stroke-dasharray="4 4" stroke-width="1.5" x1="0" x2="800" y1="22" y2="22"></line>
+<text fill="#e11d48" font-family="Public Sans" font-size="10" font-weight="700" x="10" y="16">DANGER CEILING (4.2 persons/m²)</text>
+<!-- Baseline Historic Wave -->
+<path d="M 0 75 Q 160 65, 300 68 T 600 72 T 800 70" fill="none" opacity="0.7" stroke="#94a3b8" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Predictive Surge Wave Area Fill -->
+<path d="M 0 75 Q 150 58, 260 48 T 400 28 T 520 46 T 680 60 T 800 68 L 800 100 L 0 100 Z" fill="#3b82f6" fill-opacity="0.12"></path>
+<!-- Predictive Surge Wave Stroke -->
+<path d="M 0 75 Q 150 58, 260 48 T 400 28 T 520 46 T 680 60 T 800 68" fill="none" stroke="#2563eb" stroke-width="2.5"></path>
+<!-- Surge Vertex Marker at T+15 -->
+<circle cx="400" cy="28" fill="#f59e0b" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="400" cy="28" fill="#f59e0b" fill-opacity="0.25" r="11"></circle>
+<text fill="#b45309" font-family="Public Sans" font-size="11" font-weight="700" text-anchor="middle" x="400" y="16">3.7 p/m² Peak</text>
+</svg>
+</div>
+</div>
+<!-- Alert Action Card -->
+<div class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex flex-col justify-between gap-3 h-full">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-amber-700">
+<span class="material-symbols-outlined text-lg">crisis_alert</span>
+<span class="font-bold text-sm">T+15 Surge Alert</span>
+</div>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 uppercase">High Priority</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">
+Inflow convergence from Triveni Marg heading to Sangam Ghat 4 at 18:45 hrs. Sector 4A Rajmarg capacity predicted at 88% (approaching ceiling 4.2 p/m²).
+</p>
+</div>
+<div class="flex flex-col gap-2 pt-2 border-t border-slate-200">
+<button class="w-full flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-blue-700 hover:bg-blue-800 text-white font-bold text-xs transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-base">bolt</span>
+<span>ACTIVATE PACING &amp; DIVERSION</span>
+</button>
+<span class="text-[11px] text-slate-400 text-center font-medium">Informs Route Overrides team to stagger Sector 4A turnstiles</span>
+<div class="flex items-center justify-between pt-1 text-xs">
+<span class="text-emerald-700 font-bold">Advisory Status: READY</span>
+<span class="text-slate-500 font-semibold">Confidence: 94%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Filter pill micro-interaction
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.className = 'filter-btn px-3 py-1 rounded text-xs font-medium text-slate-600 hover:text-slate-900 transition-all';
+      });
+      btn.className = 'filter-btn px-3 py-1 rounded text-xs font-semibold bg-white text-blue-700 shadow-xs transition-all';
+    });
+  });
+</script></main></div></body></html>

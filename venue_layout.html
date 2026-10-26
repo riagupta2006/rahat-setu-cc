@@ -1,0 +1,805 @@
+<!DOCTYPE html><html class="light" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-dim": "#cbdbf5",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "secondary": "#15803d",
+          "inverse-primary": "#b7c4ff",
+          "on-secondary": "#ffffff",
+          "primary": "#0037b0",
+          "inverse-surface": "#213145",
+          "surface-container-lowest": "#ffffff",
+          "surface-container": "#f1f5f9",
+          "tertiary": "#d97706",
+          "outline": "#64748b",
+          "secondary-fixed-dim": "#bec6e0",
+          "surface-tint": "#2151da",
+          "on-surface-variant": "#475569",
+          "on-primary": "#ffffff",
+          "surface-container-highest": "#e2e8f0",
+          "surface-bright": "#ffffff",
+          "on-tertiary-container": "#78350f",
+          "tertiary-fixed-dim": "#93ccff",
+          "on-primary-fixed-variant": "#0039b5",
+          "on-tertiary-fixed-variant": "#004b73",
+          "secondary-container": "#dcfce7",
+          "primary-fixed-dim": "#b7c4ff",
+          "primary-fixed": "#dce1ff",
+          "background": "#f8fafc",
+          "tertiary-fixed": "#cce5ff",
+          "on-secondary-container": "#166534",
+          "secondary-fixed": "#dae2fd",
+          "on-tertiary-fixed": "#001d31",
+          "on-surface": "#0f172a",
+          "on-error-container": "#93000a",
+          "surface-container-high": "#e2e8f0",
+          "surface": "#f8fafc",
+          "primary-container": "#1d4ed8",
+          "on-primary-fixed": "#001551",
+          "surface-variant": "#f1f5f9",
+          "inverse-on-surface": "#eaf1ff",
+          "on-secondary-fixed": "#131b2e",
+          "outline-variant": "#cbd5e1",
+          "on-primary-container": "#ffffff",
+          "on-secondary-fixed-variant": "#3f465c",
+          "on-background": "#0f172a",
+          "surface-container-low": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "error-container": "#fee2e2",
+          "tertiary-container": "#fef3c7"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.375rem",
+          "xl": "0.5rem",
+          "full": "9999px"
+        },
+        "fontFamily": {
+          "data-metric": ["JetBrains Mono"],
+          "data-telemetry": ["JetBrains Mono"],
+          "headline-sm": ["Public Sans", "sans-serif"],
+          "headline-md": ["Public Sans", "sans-serif"],
+          "headline-lg": ["Public Sans", "sans-serif"],
+          "body-sm": ["Public Sans", "sans-serif"],
+          "body-base": ["Public Sans", "sans-serif"],
+          "body-lg": ["Public Sans", "sans-serif"],
+          "label-action": ["Public Sans", "sans-serif"],
+          "label-badge": ["Public Sans", "sans-serif"]
+        }
+      }
+    }
+  }</script></head><body class="bg-slate-50 font-sans text-slate-900 antialiased selection:bg-blue-600 selection:text-white min-h-screen"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm flex items-center justify-between px-6"><div class="flex items-center gap-5"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-blue-700 flex items-center justify-center text-white shadow-sm ring-2 ring-blue-100"><span class="material-symbols-outlined text-xl">security</span></div><div class="flex flex-col"><span class="font-bold text-sm tracking-tight text-slate-900 uppercase">RAHAT SETU COMMAND CONTROL</span><span class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">EVENT INCIDENT &amp; RELIEF NETWORK</span></div></div><div class="h-6 w-px bg-slate-200 hidden xl:block"></div><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-100 border border-slate-200"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="text-xs font-semibold text-slate-800">Maha Kumbh 2025 · Prayagraj Sector 4 Central</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-bold uppercase tracking-wider">LIVE</span></div></div><div class="flex items-center gap-4"><div class="hidden 2xl:flex items-center gap-4 px-3 py-1.5 rounded-md bg-slate-50 border border-slate-200"><div class="flex flex-col"><span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Total On-Site</span><span class="font-mono text-sm font-bold text-blue-700">248,500</span></div><div class="h-6 w-px bg-slate-200"></div><div class="flex flex-col"><span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">System Health</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="font-mono text-xs font-bold text-emerald-700">Nominal (99.8%)</span></div></div></div><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-red-200 bg-red-50 text-red-700 hover:bg-red-600 hover:text-white transition-colors shadow-sm font-semibold text-xs" type="button"><span class="material-symbols-outlined text-sm">podcasts</span><span class="uppercase tracking-wider">Emergency Broadcast</span></button><div class="flex items-center gap-3 pl-3 border-l border-slate-200"><div class="hidden md:flex flex-col text-right"><span class="text-xs text-slate-900 font-bold">Rajesh Malhotra</span><span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Sector Lead</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-slate-200" src="https://lh3.googleusercontent.com/aida/AEtjO1XJ9Wy3RuIXJJibyGx5FZy1_5ZCv5igj3ru2pKNYvdxuMgPM2B9zBChT2HXwf8SLcO4F96so1nOiyqLNq1Q0CMSYH0_La2vRspkL63lhFkg8JhMR36dpBxcWtdmTPTABo1npcHykdnnb-ZOoHhnVrCR2mJMmiTajGp1jGriCvquOnYiCION1Sgtp_5QOqgou_0mZOzlyTFWVv-Ndc_41ePZJhlwn1lm-UhS9CB5mLS6vqi2qxsBspcLWQI"></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-white z-40 flex flex-col justify-between p-4 border-r border-slate-200 shadow-sm"><div class="flex flex-col gap-3"><div class="px-2 py-1"><span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Tactical Modules</span></div><nav class="flex flex-col gap-1.5"><a class="flex items-center gap-3 px-3 py-2 rounded-md text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all font-medium text-xs group" data-path="live-density-and-flow" href="#"><span class="material-symbols-outlined text-lg text-slate-500 group-hover:text-blue-600">hub</span><span class="">Live Density &amp; Flow</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded-md transition-all font-semibold text-xs bg-blue-50 text-blue-700 border border-blue-200 shadow-xs" data-path="venue-layout-and-poi-gis" href="#"><span class="material-symbols-outlined text-lg text-blue-600">map</span><span class="">Venue Layout &amp; POI GIS</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-md text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all font-medium text-xs group" data-path="medical-and-rapid-dispatch" href="#"><span class="material-symbols-outlined text-lg text-slate-500 group-hover:text-blue-600">emergency</span><span class="">Medical &amp; Rapid Dispatch</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-md text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all font-medium text-xs group" data-path="lost-persons-and-ai-vision" href="#"><span class="material-symbols-outlined text-lg text-slate-500 group-hover:text-blue-600">person_search</span><span class="">Lost Persons &amp; AI Vision</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-md text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all font-medium text-xs group" data-path="route-analytics-and-overrides" href="#"><span class="material-symbols-outlined text-lg text-slate-500 group-hover:text-blue-600">alt_route</span><span class="">Route Analytics &amp; Overrides</span></a></nav></div><div class="flex flex-col gap-2 p-3 rounded-lg bg-slate-50 border border-slate-200"><div class="flex items-center justify-between"><span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Sector Mesh Net</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div><div class="flex items-center justify-between text-xs"><span class="text-slate-600 font-medium">Active Nodes</span><span class="font-mono font-bold text-slate-900">142 / 142</span></div><div class="flex items-center justify-between text-xs"><span class="text-slate-600 font-medium">Telemetry Lag</span><span class="font-mono font-bold text-emerald-600">12ms</span></div></div></aside><div class="pl-64"><main class="relative pt-20 min-h-screen bg-slate-50 w-full px-8 pb-10"><div class="flex flex-col w-full gap-5">
+<!-- SUMMARY HEADER -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+<div>
+<h1 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600">location_on</span>
+    Venue Infrastructure &amp; Points of Interest
+  </h1>
+<p class="text-xs text-slate-600 mt-0.5">Inspect status of drinking water stations, medical tents, sanitation blocks, and gates across Sector 4.</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 border border-emerald-200 text-emerald-700">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> 100% Operational Grid
+  </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono bg-slate-100 border border-slate-200 text-slate-700">
+    Sector 4 CAD v2.8
+  </span>
+</div>
+</div>
+<!-- TOP BAR: Facility Readiness & Operations Bar -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 w-full">
+<!-- Active POIs -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider truncate">Active Infrastructure</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono text-[11px] font-semibold border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> 100%
+        </span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-mono text-2xl font-bold text-slate-900">184</span>
+<span class="font-mono text-xs text-slate-400 font-semibold">/ 184</span>
+</div>
+<span class="text-xs font-semibold text-emerald-600 truncate mt-1">All Nodes Functional</span>
+</div>
+<!-- Hydration -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider truncate">Water &amp; Hydration</span>
+<span class="material-symbols-outlined text-blue-600 text-base">water_drop</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-mono text-2xl font-bold text-slate-900">42</span>
+<span class="text-[11px] font-bold text-blue-600">STATIONS</span>
+</div>
+<span class="text-xs text-slate-600 truncate mt-1">Nominal pressure • 4.2 bar</span>
+</div>
+<!-- Medical & First Aid -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider truncate">Medical &amp; Aid Tents</span>
+<span class="material-symbols-outlined text-red-600 text-base">medical_services</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-mono text-2xl font-bold text-slate-900">12</span>
+<span class="text-[11px] font-bold text-red-600">READY</span>
+</div>
+<span class="text-xs text-slate-600 truncate mt-1">24 ambulances on standby</span>
+</div>
+<!-- Gates & Turnstiles -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider truncate">Gates &amp; Egress</span>
+<span class="material-symbols-outlined text-emerald-600 text-base">sensor_door</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-mono text-2xl font-bold text-slate-900">16</span>
+<span class="text-[11px] font-bold text-emerald-600">ACTIVE</span>
+</div>
+<span class="text-xs text-slate-600 truncate mt-1">A1-A8 • B1-B8 open</span>
+</div>
+<!-- Info & Help Desks -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs min-w-0 col-span-2 md:col-span-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider truncate">Information Hubs</span>
+<span class="material-symbols-outlined text-amber-600 text-base">contact_support</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-mono text-2xl font-bold text-slate-900">8</span>
+<span class="text-[11px] font-bold text-amber-600">BOOTHS</span>
+</div>
+<span class="text-xs text-slate-600 truncate mt-1">Fully staffed • 100% online</span>
+</div>
+</div>
+<!-- MAIN OPERATIONAL WORKSPACE (GIS Blueprint Canvas + Right Ledger Panel) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 w-full items-start">
+<!-- CENTER STAGE: MASTER GIS BLUEPRINT (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-3 rounded-xl bg-white p-4 border border-slate-200 shadow-xs min-w-0">
+<!-- Vector GIS Map Canvas Controls -->
+<div class="flex flex-wrap items-center justify-between gap-3 bg-slate-50 border border-slate-200 p-2.5 rounded-lg"><div class="flex items-center gap-3"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-700 text-lg">layers</span><span class="text-sm font-bold text-slate-900">Infrastructure GIS Master</span></div><span class="text-[10px] px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-mono font-bold">PRAYAGRAJ SEC-4 GIS</span></div><div class="flex flex-wrap items-center gap-1.5"><label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white text-slate-800 hover:bg-slate-100 cursor-pointer select-none border border-slate-200 text-xs font-medium shadow-2xs"><input checked="" class="accent-blue-600 rounded w-3.5 h-3.5" id="layer-water" onchange="toggleLayer('water')" type="checkbox"><span class="material-symbols-outlined text-xs text-blue-600 font-bold">water_drop</span><span class="">Hydration (42)</span></label><label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white text-slate-800 hover:bg-slate-100 cursor-pointer select-none border border-slate-200 text-xs font-medium shadow-2xs"><input checked="" class="accent-red-600 rounded w-3.5 h-3.5" id="layer-medical" onchange="toggleLayer('medical')" type="checkbox"><span class="material-symbols-outlined text-xs text-red-600 font-bold">local_hospital</span><span class="">Medical (12)</span></label><label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white text-slate-800 hover:bg-slate-100 cursor-pointer select-none border border-slate-200 text-xs font-medium shadow-2xs"><input checked="" class="accent-emerald-600 rounded w-3.5 h-3.5" id="layer-gates" onchange="toggleLayer('gates')" type="checkbox"><span class="material-symbols-outlined text-xs text-emerald-600 font-bold">sensor_door</span><span class="">Gates (16)</span></label><label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white text-slate-800 hover:bg-slate-100 cursor-pointer select-none border border-slate-200 text-xs font-medium shadow-2xs"><input checked="" class="accent-amber-600 rounded w-3.5 h-3.5" id="layer-info" onchange="toggleLayer('info')" type="checkbox"><span class="material-symbols-outlined text-xs text-amber-600 font-bold">info</span><span class="">Help Desks (8)</span></label><label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white text-slate-800 hover:bg-slate-100 cursor-pointer select-none border border-slate-200 text-xs font-medium shadow-2xs"><input checked="" class="accent-slate-600 rounded w-3.5 h-3.5" id="layer-sanitation" onchange="toggleLayer('sanitation')" type="checkbox"><span class="material-symbols-outlined text-xs text-slate-600 font-bold">wc</span><span class="">Sanitation (24)</span></label><label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white text-slate-800 hover:bg-slate-100 cursor-pointer select-none border border-slate-200 text-xs font-medium shadow-2xs"><input checked="" class="accent-indigo-600 rounded w-3.5 h-3.5" id="layer-roads" onchange="toggleLayer('roads')" type="checkbox"><span class="material-symbols-outlined text-xs text-indigo-600 font-bold">route</span><span class="">Corridors</span></label></div></div>
+<!-- MAP CAD VIEWER (LIGHT THEME VECTOR SCHEMATIC) -->
+<div class="relative w-full h-[540px] bg-slate-100/90 rounded-xl overflow-hidden border border-slate-200 select-none flex items-center justify-center" id="gis-viewport">
+<!-- Ambient Grid Background -->
+<svg class="absolute inset-0 w-full h-full stroke-slate-300/60" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="cadGridLight" patternUnits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke-width="0.8"></path>
+<circle class="fill-slate-400/50" cx="0" cy="0" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#cadGridLight)" height="100%" width="100%"></rect>
+</svg>
+<!-- Dynamic Structural Vector Floorplan of Grand Event Grounds (Light Palette) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 960 600"><path d="M 20 80 Q 240 60, 480 90 T 940 70" fill="none" opacity="0.8" stroke="#0284c7" stroke-dasharray="8 4" stroke-width="5"></path><rect fill="#e0f2fe" fill-opacity="0.9" height="35" rx="6" stroke="#bae6fd" stroke-width="1.5" width="370" x="30" y="45"></rect><text class="fill-sky-800 text-[11px] font-sans font-bold tracking-wider uppercase" x="45" y="68">Ganga River Embankment · Sangam Ghat Axis</text><rect fill="#f8fafc" fill-opacity="0.95" height="460" rx="16" stroke="#cbd5e1" stroke-width="2" width="840" x="60" y="100"></rect><g class="transition-opacity duration-300" id="roads-group"><path d="M 480 100 L 480 560" stroke="#fde68a" stroke-opacity="0.6" stroke-width="28"></path><path d="M 480 100 L 480 560" stroke="#d97706" stroke-dasharray="6 4" stroke-opacity="0.9" stroke-width="2.5"></path><text class="fill-amber-800 text-[10px] font-sans font-bold uppercase tracking-widest rotate-90" x="496" y="370">Triveni Marg · Emergency Corridor</text><path d="M 60 320 L 900 320" stroke="#fde68a" stroke-opacity="0.6" stroke-width="28"></path><path d="M 60 320 L 900 320" stroke="#d97706" stroke-dasharray="6 4" stroke-opacity="0.9" stroke-width="2.5"></path><text class="fill-amber-800 text-[10px] font-sans font-bold uppercase tracking-widest" x="160" y="312">Sangam Main Axis · Rapid Transit</text><rect fill="none" height="280" rx="12" stroke="#94a3b8" stroke-dasharray="5 5" stroke-opacity="0.6" stroke-width="1.5" width="520" x="220" y="180"></rect></g><rect fill="#f1f5f9" height="120" rx="8" stroke="#93c5fd" stroke-width="1.5" width="180" x="110" y="145"></rect><text class="fill-slate-800 text-[12px] font-sans font-bold" x="125" y="172">Annapurna Food Zone</text><text class="fill-slate-500 text-[10px] font-mono" x="125" y="192">Langar &amp; Prasadam Hall</text><circle cx="480" cy="320" fill="#f8fafc" r="90" stroke="#3b82f6" stroke-dasharray="6 3" stroke-width="2.5"></circle><circle cx="480" cy="320" fill="#eff6ff" r="44" stroke="#60a5fa" stroke-width="2"></circle><text class="fill-slate-900 text-[12px] font-sans font-bold" text-anchor="middle" x="480" y="317">Central Sangam Chowk</text><text class="fill-blue-700 text-[10px] font-mono font-bold" text-anchor="middle" x="480" y="334">Command Hub 04</text><rect fill="#f1f5f9" height="120" rx="8" stroke="#93c5fd" stroke-width="1.5" width="180" x="670" y="145"></rect><text class="fill-slate-800 text-[12px] font-sans font-bold" x="685" y="172">Pilgrim Holding Enclosure</text><text class="fill-slate-500 text-[10px] font-mono" x="685" y="192">Capacity: 45,000 pilgrims</text><rect fill="#fef2f2" height="125" rx="8" stroke="#fca5a5" stroke-width="1.5" width="230" x="150" y="395"></rect><text class="fill-slate-800 text-[12px] font-sans font-bold" x="165" y="422">South Logistics &amp; Jal Nigam</text><text class="fill-red-700 text-[10px] font-mono font-medium" x="165" y="442">Fleet Restock · Tanker Bay</text><rect fill="#f0fdf4" height="125" rx="8" stroke="#86efac" stroke-width="1.5" width="260" x="580" y="395"></rect><text class="fill-slate-800 text-[12px] font-sans font-bold" x="595" y="422">Sanitation &amp; Egress Hub</text><text class="fill-emerald-700 text-[10px] font-mono font-medium" x="595" y="442">Swachh Bharat Control Unit 03</text></svg>
+<!-- INTERACTIVE POI PINS LAYER (Absolute positioning on canvas with bright contrast pins) -->
+<div class="absolute inset-0 w-full h-full pointer-events-auto" id="poi-pins-container">
+<!-- Gates (Green) -->
+<button class="poi-pin poi-gates absolute top-[14%] left-[6%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-emerald-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('gate_a1')" type="button"><span class="material-symbols-outlined text-sm text-emerald-600 font-bold">sensor_door</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-emerald-800 bg-white border border-emerald-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Gate A1 Hanuman</span></button>
+<button class="poi-pin poi-gates absolute top-[14%] left-[49.5%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-emerald-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('gate_a4')" type="button"><span class="material-symbols-outlined text-sm text-emerald-600 font-bold">sensor_door</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-emerald-800 bg-white border border-emerald-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Gate A4 Sangam</span></button>
+<button class="poi-pin poi-gates absolute top-[14%] left-[93%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-emerald-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('gate_a8')" type="button"><span class="material-symbols-outlined text-sm text-emerald-600 font-bold">sensor_door</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-emerald-800 bg-white border border-emerald-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Gate A8 East</span></button>
+<button class="poi-pin poi-gates absolute bottom-[3.5%] left-[50%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-emerald-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('gate_b4')" type="button"><span class="material-symbols-outlined text-sm text-emerald-600 font-bold">sensor_door</span><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-emerald-800 bg-white border border-emerald-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Gate B4 Triveni</span></button>
+<!-- Hydration (Bright Blue) -->
+<button class="poi-pin poi-water absolute top-[28%] left-[42%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white shadow-lg ring-4 ring-blue-300 hover:scale-115 transition-transform focus:outline-none animate-pulse" id="pin-hydro-14" onclick="selectPOI('hydro_14')" type="button"><span class="material-symbols-outlined text-lg">water_drop</span><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] bg-blue-900 text-white font-bold px-2 py-0.5 rounded-full shadow pointer-events-none">Hydration #14 (In Focus)</span></button>
+<button class="poi-pin poi-water absolute top-[36%] left-[22%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-blue-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('hydro_07')" type="button"><span class="material-symbols-outlined text-sm text-blue-600 font-bold">water_drop</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-blue-800 bg-white border border-blue-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Jal #07 (Annapurna)</span></button>
+<button class="poi-pin poi-water absolute top-[36%] left-[78%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-blue-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('hydro_22')" type="button"><span class="material-symbols-outlined text-sm text-blue-600 font-bold">water_drop</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-blue-800 bg-white border border-blue-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Jal #22</span></button>
+<button class="poi-pin poi-water absolute top-[68%] left-[45%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-blue-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('hydro_31')" type="button"><span class="material-symbols-outlined text-sm text-blue-600 font-bold">water_drop</span><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-blue-800 bg-white border border-blue-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Jal #31 (Triveni)</span></button>
+<!-- Medical (Red Cross) -->
+<button class="poi-pin poi-medical absolute top-[52%] left-[38%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-red-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('med_02')" type="button"><span class="material-symbols-outlined text-sm text-red-600 font-bold">local_hospital</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-red-800 bg-white border border-red-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Chikitsa Shivir #02</span></button>
+<button class="poi-pin poi-medical absolute top-[44%] left-[88%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-red-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('med_05')" type="button"><span class="material-symbols-outlined text-sm text-red-600 font-bold">local_hospital</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-red-800 bg-white border border-red-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Ambulance Bay #05</span></button>
+<!-- Information (Amber / Yellow) -->
+<button class="poi-pin poi-info absolute top-[53%] left-[54%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-amber-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('info_01')" type="button"><span class="material-symbols-outlined text-sm text-amber-600 font-bold">info</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-amber-800 bg-white border border-amber-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Seva Kendra #01</span></button>
+<button class="poi-pin poi-info absolute top-[28%] left-[12%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-amber-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('info_04')" type="button"><span class="material-symbols-outlined text-sm text-amber-600 font-bold">info</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-amber-800 bg-white border border-amber-200 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Seva Kendra #04</span></button>
+<!-- Sanitation (Slate/Outline) -->
+<button class="poi-pin poi-sanitation absolute top-[75%] left-[68%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-slate-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('san_03')" type="button"><span class="material-symbols-outlined text-sm text-slate-700 font-bold">wc</span><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-800 bg-white border border-slate-300 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Swachh Block #03</span></button>
+<button class="poi-pin poi-sanitation absolute top-[25%] left-[32%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-md border-2 border-slate-500 hover:scale-110 transition-transform focus:outline-none" onclick="selectPOI('san_01')" type="button"><span class="material-symbols-outlined text-sm text-slate-700 font-bold">wc</span><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-800 bg-white border border-slate-300 px-1.5 py-0.5 rounded shadow-sm pointer-events-none whitespace-nowrap">Swachh Block #01</span></button>
+</div>
+<!-- ON-CANVAS INSPECTOR TOOLTIP OVERLAY (Light Theme) -->
+<div class="absolute top-4 left-4 z-20 flex flex-col gap-1 p-3 rounded-lg bg-white/95 backdrop-blur-md shadow-md border border-slate-200 text-slate-900 max-w-xs transition-opacity duration-200" id="canvas-poi-tooltip">
+<div class="flex items-center justify-between gap-3">
+<span class="text-xs text-blue-700 font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">water_drop</span>
+<span id="tooltip-title" class="">Hydration Station #14</span>
+</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-bold uppercase font-mono" id="tooltip-status">100% Flow</span>
+</div>
+<p class="text-xs text-slate-600 mt-0.5" id="tooltip-desc">Sangam Ghat Axis Prayagraj • Jal Nigam 140 L/min output • Pressure 4.2 bar nominal</p>
+</div>
+<!-- GIS Compass / Orientation & Scale Legend (Prominently visible light card) -->
+<div class="absolute bottom-3 left-4 z-10 flex flex-wrap items-center gap-2 px-3 py-2 bg-white/95 backdrop-blur-md rounded-lg border border-slate-200 shadow-md">
+<div class="flex items-center gap-1.5 pr-2.5 border-r border-slate-200">
+<span class="material-symbols-outlined text-slate-500 text-xs">navigation</span>
+<span class="text-[10px] text-slate-700 font-mono font-semibold">Sangam N 25.43° E 81.84°</span>
+</div>
+<div class="flex items-center gap-3 text-[11px] font-medium">
+<div class="flex items-center gap-1 text-blue-700 font-semibold"><span class="w-2 h-2 rounded-full bg-blue-600"></span><span class="">Hydration</span></div>
+<div class="flex items-center gap-1 text-red-700 font-semibold"><span class="w-2 h-2 rounded-full bg-red-600"></span><span class="">Medical</span></div>
+<div class="flex items-center gap-1 text-emerald-700 font-semibold"><span class="w-2 h-2 rounded-full bg-emerald-600"></span><span class="">Gates</span></div>
+<div class="flex items-center gap-1 text-amber-700 font-semibold"><span class="w-2 h-2 rounded-full bg-amber-600"></span><span class="">Info Desk</span></div>
+</div>
+</div>
+<!-- Map Zoom Controls -->
+<div class="absolute bottom-3 right-4 z-10 flex items-center gap-1 bg-white p-1 rounded-lg border border-slate-200 shadow-md">
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-slate-100 text-slate-700 transition-colors" title="Zoom in" type="button">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-slate-100 text-slate-700 transition-colors" title="Zoom out" type="button">
+<span class="material-symbols-outlined text-sm font-bold">remove</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-slate-100 text-slate-700 transition-colors" title="Reset view" type="button">
+<span class="material-symbols-outlined text-sm font-bold">crop_free</span>
+</button>
+</div>
+</div>
+<!-- Quick Telemetry Footnote for Sector Map -->
+<div class="flex flex-wrap items-center justify-between text-slate-500 px-1 pt-1 text-xs">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+GIS Vector sync rate: 1,000ms • Sector 4 Master Mesh Active
+</span>
+<span class="font-mono text-slate-400">Projection: UTM WGS84 Zone 44N</span>
+</div>
+</div>
+<!-- RIGHT PANEL: FACILITY STATUS & INVENTORY LEDGER (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-4 w-full">
+<!-- SELECTED POI INSPECTION CARD (Bespoke Telemetry) -->
+<div class="flex flex-col gap-3.5 p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+<!-- Header with Status Pill -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-blue-700 uppercase font-mono tracking-wider">Target POI In Focus</span>
+<h2 class="text-base font-bold text-slate-900" id="inspected-name">Hydration Station #14</h2>
+<span class="text-xs text-slate-500" id="inspected-loc">Sangam Ghat Axis · Jal Nigam North Station</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase" id="inspected-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Operational
+</span>
+</div>
+<!-- Telemetry Gauges Grid -->
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<!-- Tank Capacity -->
+<div class="flex flex-col p-3 rounded-lg bg-slate-50 border border-slate-200">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Tank Capacity</span>
+<div class="flex items-baseline gap-1 my-0.5">
+<span class="font-mono text-xl font-bold text-slate-900" id="inspected-metric-1">92%</span>
+<span class="text-[11px] font-semibold text-blue-700 font-mono">/ 10,000L</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mt-1">
+<div class="bg-blue-600 h-full rounded-full transition-all duration-300" id="inspected-bar" style="width: 92%"></div>
+</div>
+</div>
+<!-- Flow Rate -->
+<div class="flex flex-col p-3 rounded-lg bg-slate-50 border border-slate-200">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Discharge Flow</span>
+<div class="flex items-baseline gap-1 my-0.5">
+<span class="font-mono text-xl font-bold text-slate-900" id="inspected-metric-2">140</span>
+<span class="text-[11px] text-slate-500 font-mono font-semibold">L/min</span>
+</div>
+<span class="text-xs font-semibold text-emerald-600 truncate mt-1">Pressure Nominal</span>
+</div>
+<!-- Last Maintenance -->
+<div class="flex flex-col p-3 rounded-lg bg-slate-50 border border-slate-200">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Last Routine Check</span>
+<span class="font-mono text-sm font-bold text-slate-800 mt-1" id="inspected-metric-3">18m ago</span>
+<span class="text-xs text-slate-500 truncate">Auto sensor log</span>
+</div>
+<!-- Attendant On-Duty -->
+<div class="flex flex-col p-3 rounded-lg bg-slate-50 border border-slate-200">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Assigned Staff</span>
+<span class="font-mono text-sm font-bold text-slate-800 mt-1" id="inspected-metric-4">S. Verma (Duty)</span>
+<span class="text-xs text-emerald-600 font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Radio ID: #884
+</span>
+</div>
+</div>
+<!-- Quick Response Action Trigger Group -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full flex items-center gap-2.5 py-2.5 px-3 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors shadow-sm text-left group" onclick="triggerRestock()" type="button">
+<span class="material-symbols-outlined text-lg shrink-0">water_drop</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-bold uppercase tracking-wider leading-tight">Request Water Tanker Restock</span>
+<span class="text-[11px] text-blue-100 font-normal truncate">Dispatches Jal Nigam refill tanker (10,000L)</span>
+</div>
+</button>
+<button class="w-full flex items-center gap-2.5 py-2.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 font-semibold transition-colors shadow-2xs text-left" onclick="triggerDispatch()" type="button">
+<span class="material-symbols-outlined text-lg shrink-0 text-slate-600">engineering</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-bold uppercase tracking-wider leading-tight">Dispatch Maintenance Crew</span>
+<span class="text-[11px] text-slate-500 font-normal truncate">Sends nearest technician S. Verma with kit</span>
+</div>
+</button>
+</div>
+</div>
+<!-- SEARCHABLE POI DIRECTORY & LEDGER -->
+<div class="flex flex-col gap-2.5 p-4 rounded-xl bg-white border border-slate-200 shadow-xs flex-1">
+<div class="flex items-center justify-between">
+<h3 class="text-sm font-bold text-slate-900">Sector Infrastructure Ledger</h3>
+<span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-600">184 RECORDS</span>
+</div>
+<!-- Search Bar Filter -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-base">search</span>
+<input class="w-full bg-slate-50 border border-slate-200 text-slate-900 text-xs pl-8 pr-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white placeholder-slate-400" id="poi-search-input" onkeyup="filterPOIList()" placeholder="Filter by ID, type, sector..." type="text">
+</div>
+<!-- Scrollable POI List items -->
+<div class="flex flex-col gap-1.5 max-h-[290px] overflow-y-auto pr-0.5 mt-1" id="poi-list-container">
+<!-- Item 1 (Hydration 14) -->
+<div class="poi-item flex items-center justify-between p-2.5 rounded-lg bg-blue-50 border border-blue-200 hover:bg-blue-100/70 cursor-pointer transition-colors" data-name="Hydration Station 14 North" data-poi-id="hydro_14" onclick="selectPOI('hydro_14')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-md bg-blue-600 flex items-center justify-center text-white shrink-0 shadow-2xs">
+<span class="material-symbols-outlined text-sm">water_drop</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-bold text-slate-900 truncate">Hydration Station #14 (Jal Nigam)</span>
+<span class="text-[11px] text-slate-500 truncate">Sangam Ghat Axis • 92% Vol</span>
+</div>
+</div>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 uppercase font-mono font-bold shrink-0">OPERATIONAL</span>
+</div>
+<!-- Item 2 (Medical 02) -->
+<div class="poi-item flex items-center justify-between p-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 cursor-pointer transition-colors" data-name="Medical Tent 02 Central" data-poi-id="med_02" onclick="selectPOI('med_02')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-md bg-red-100 text-red-600 border border-red-200 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">local_hospital</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-slate-900 truncate">Chikitsa Shivir #02</span>
+<span class="text-[11px] text-slate-500 truncate">Triveni Marg • 6 Beds Ready</span>
+</div>
+</div>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 uppercase font-mono font-bold shrink-0">OPERATIONAL</span>
+</div>
+<!-- Item 3 (Gate A1) -->
+<div class="poi-item flex items-center justify-between p-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 cursor-pointer transition-colors" data-name="Perimeter Gate A1 Northwest" data-poi-id="gate_a1" onclick="selectPOI('gate_a1')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-md bg-emerald-100 text-emerald-600 border border-emerald-200 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">sensor_door</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-slate-900 truncate">Hanuman Mandir Gate A1</span>
+<span class="text-[11px] text-slate-500 truncate">North Concourse • 12 Turnstiles Open</span>
+</div>
+</div>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 uppercase font-mono font-bold shrink-0">OPERATIONAL</span>
+</div>
+<!-- Item 4 (Hydration 07 - Restocking) -->
+<div class="poi-item flex items-center justify-between p-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 cursor-pointer transition-colors" data-name="Hydration Station 07 West" data-poi-id="hydro_07" onclick="selectPOI('hydro_07')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-md bg-amber-100 text-amber-600 border border-amber-200 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">water_drop</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-slate-900 truncate">Hydration Station #07</span>
+<span class="text-[11px] text-slate-500 truncate">West Concourse • 34% Vol</span>
+</div>
+</div>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 uppercase font-mono font-bold shrink-0">RESTOCKING</span>
+</div>
+<!-- Item 5 (Info 01) -->
+<div class="poi-item flex items-center justify-between p-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 cursor-pointer transition-colors" data-name="Info Desk 01 Central Plaza" data-poi-id="info_01" onclick="selectPOI('info_01')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-md bg-amber-100 text-amber-600 border border-amber-200 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">info</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-slate-900 truncate">Info Help Desk #01</span>
+<span class="text-[11px] text-slate-500 truncate">Central Plaza • 4 Guides</span>
+</div>
+</div>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 uppercase font-mono font-bold shrink-0">OPERATIONAL</span>
+</div>
+<!-- Item 6 (Sanitation 03 - Routine Check) -->
+<div class="poi-item flex items-center justify-between p-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 cursor-pointer transition-colors" data-name="Sanitation Block 03 Southeast" data-poi-id="san_03" onclick="selectPOI('san_03')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-md bg-slate-200 text-slate-700 border border-slate-300 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">wc</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-slate-900 truncate">Sanitation Block #03</span>
+<span class="text-[11px] text-slate-500 truncate">Southeast Hub • 24 Units</span>
+</div>
+</div>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 text-slate-700 uppercase font-mono font-bold shrink-0">ROUTINE CHECK</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  // POI Datastore
+  const poiData = {
+    'hydro_14': {
+      name: "Hydration Station #14",
+      location: "Sangam Ghat Axis · Jal Nigam North Station",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Tank Capacity",
+      m1Val: "92%",
+      m1Sub: "/ 10,000L",
+      barWidth: "92%",
+      barColor: "bg-blue-600",
+      m2Label: "Discharge Flow",
+      m2Val: "140",
+      m2Unit: "L/min",
+      m2Sub: "Pressure Nominal (4.2 bar)",
+      m3Val: "18m ago",
+      m3Sub: "Automated telemetry ping",
+      m4Val: "S. Verma (Duty)",
+      m4Sub: "Radio ID: #884",
+      tooltipTitle: "Hydration Station #14",
+      tooltipStatus: "100% Flow",
+      tooltipDesc: "Sangam Ghat Axis Prayagraj • Jal Nigam 140 L/min output • Pressure 4.2 bar nominal"
+    },
+    'hydro_07': {
+      name: "Hydration Station #07",
+      location: "West Concourse · Sector 4",
+      status: "RESTOCKING",
+      statusColor: "text-amber-800 bg-amber-50 border border-amber-200",
+      m1Label: "Tank Capacity",
+      m1Val: "34%",
+      m1Sub: "/ 10,000L",
+      barWidth: "34%",
+      barColor: "bg-amber-500",
+      m2Label: "Discharge Flow",
+      m2Val: "95",
+      m2Unit: "L/min",
+      m2Sub: "Gravity feed refill en-route",
+      m3Val: "4m ago",
+      m3Sub: "Refill tanker in transit",
+      m4Val: "K. Narang (On Site)",
+      m4Sub: "Radio ID: #712",
+      tooltipTitle: "Hydration Station #07",
+      tooltipStatus: "Refilling",
+      tooltipDesc: "West Concourse • Water tender vehicle ETA 4 minutes"
+    },
+    'hydro_22': {
+      name: "Hydration Station #22",
+      location: "East Concourse · Main Strip",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Tank Capacity",
+      m1Val: "88%",
+      m1Sub: "/ 10,000L",
+      barWidth: "88%",
+      barColor: "bg-blue-600",
+      m2Label: "Discharge Flow",
+      m2Val: "135",
+      m2Unit: "L/min",
+      m2Sub: "Nominal pressure",
+      m3Val: "32m ago",
+      m3Sub: "Sensor self-test passed",
+      m4Val: "P. Yadav (Duty)",
+      m4Sub: "Radio ID: #603",
+      tooltipTitle: "Hydration Station #22",
+      tooltipStatus: "88% Vol",
+      tooltipDesc: "East Concourse • Nominal flow, high traffic readiness"
+    },
+    'hydro_31': {
+      name: "Hydration Station #31",
+      location: "South Plaza · Axis Alpha",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Tank Capacity",
+      m1Val: "96%",
+      m1Sub: "/ 12,000L",
+      barWidth: "96%",
+      barColor: "bg-blue-600",
+      m2Label: "Discharge Flow",
+      m2Val: "160",
+      m2Unit: "L/min",
+      m2Sub: "Dual valve active",
+      m3Val: "12m ago",
+      m3Sub: "Manual check complete",
+      m4Val: "A. Singh (Duty)",
+      m4Sub: "Radio ID: #449",
+      tooltipTitle: "Hydration Station #31",
+      tooltipStatus: "Optimal",
+      tooltipDesc: "South Plaza Axis • Full reserve capacity"
+    },
+    'med_02': {
+      name: "Medical Tent #02",
+      location: "Central Axis · Rapid Staging",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Triage Bed Readiness",
+      m1Val: "6 / 8",
+      m1Sub: "Beds Open",
+      barWidth: "75%",
+      barColor: "bg-red-500",
+      m2Label: "Dedicated Ambulances",
+      m2Val: "4",
+      m2Unit: "Vehicles",
+      m2Sub: "All drivers at post",
+      m3Val: "8m ago",
+      m3Sub: "Paramedic inventory audit",
+      m4Val: "Dr. A. Sharma (Chief)",
+      m4Sub: "Radio ID: #MED-9",
+      tooltipTitle: "Medical Tent #02",
+      tooltipStatus: "Ready",
+      tooltipDesc: "Sector 4 Central • Advanced trauma & hydration stabilization"
+    },
+    'med_05': {
+      name: "Medical Tent #05",
+      location: "East Logistics Terminal",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Triage Bed Readiness",
+      m1Val: "10 / 10",
+      m1Sub: "All Clear",
+      barWidth: "100%",
+      barColor: "bg-red-500",
+      m2Label: "Dedicated Ambulances",
+      m2Val: "6",
+      m2Unit: "Vehicles",
+      m2Sub: "Corridor Alpha access",
+      m3Val: "22m ago",
+      m3Sub: "Supply audit verified",
+      m4Val: "Dr. N. Roy (Chief)",
+      m4Sub: "Radio ID: #MED-4",
+      tooltipTitle: "Medical Tent #05",
+      tooltipStatus: "100% Ready",
+      tooltipDesc: "East Logistics • Emergency vehicle egress route clear"
+    },
+    'gate_a1': {
+      name: "Perimeter Gate A1",
+      location: "Northwest Concourse",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Turnstiles Open",
+      m1Val: "12 / 12",
+      m1Sub: "100%",
+      barWidth: "100%",
+      barColor: "bg-emerald-600",
+      m2Label: "Throughput Capacity",
+      m2Val: "4,200",
+      m2Unit: "pax/hr",
+      m2Sub: "Zero bottleneck detected",
+      m3Val: "15m ago",
+      m3Sub: "Turnstile biometric check",
+      m4Val: "Insp. M. Joshi",
+      m4Sub: "Security Sector Lead",
+      tooltipTitle: "Perimeter Gate A1",
+      tooltipStatus: "All Open",
+      tooltipDesc: "12/12 turnstiles operational • Emergency egress unhindered"
+    },
+    'gate_a4': {
+      name: "Perimeter Gate A4",
+      location: "North Promenade Ghat Direct",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Turnstiles Open",
+      m1Val: "16 / 16",
+      m1Sub: "100%",
+      barWidth: "100%",
+      barColor: "bg-emerald-600",
+      m2Label: "Throughput Capacity",
+      m2Val: "5,800",
+      m2Unit: "pax/hr",
+      m2Sub: "High capacity corridor",
+      m3Val: "10m ago",
+      m3Sub: "Security scanner test",
+      m4Val: "Capt. B. Sen",
+      m4Sub: "Tactical Lead",
+      tooltipTitle: "Perimeter Gate A4",
+      tooltipStatus: "Clear Flow",
+      tooltipDesc: "Direct river access egress • Rapid barrier systems ready"
+    },
+    'gate_a8': {
+      name: "Perimeter Gate A8",
+      location: "Northeast Entry Gateway",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Turnstiles Open",
+      m1Val: "10 / 10",
+      m1Sub: "100%",
+      barWidth: "100%",
+      barColor: "bg-emerald-600",
+      m2Label: "Throughput Capacity",
+      m2Val: "3,500",
+      m2Unit: "pax/hr",
+      m2Sub: "Nominal entry rate",
+      m3Val: "25m ago",
+      m3Sub: "Sensor mesh verified",
+      m4Val: "Lt. V. Pandey",
+      m4Sub: "Perimeter Team",
+      tooltipTitle: "Perimeter Gate A8",
+      tooltipStatus: "Nominal",
+      tooltipDesc: "Northeast sector arterial entrance active"
+    },
+    'gate_b4': {
+      name: "Perimeter Gate B4",
+      location: "South Arterial Gateway",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Turnstiles Open",
+      m1Val: "16 / 16",
+      m1Sub: "100%",
+      barWidth: "100%",
+      barColor: "bg-emerald-600",
+      m2Label: "Throughput Capacity",
+      m2Val: "6,000",
+      m2Unit: "pax/hr",
+      m2Sub: "Main transport hub gate",
+      m3Val: "5m ago",
+      m3Sub: "Optical sensors checked",
+      m4Val: "Insp. S. Khan",
+      m4Sub: "South Sector Lead",
+      tooltipTitle: "Perimeter Gate B4",
+      tooltipStatus: "Unrestricted",
+      tooltipDesc: "Direct bus loop feeder • All channels operational"
+    },
+    'info_01': {
+      name: "Info Help Desk #01",
+      location: "Central Plaza Hub",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Staffing Level",
+      m1Val: "4 / 4",
+      m1Sub: "Desk Staff",
+      barWidth: "100%",
+      barColor: "bg-amber-500",
+      m2Label: "Languages Supported",
+      m2Val: "8",
+      m2Unit: "Dialects",
+      m2Sub: "Public PA link online",
+      m3Val: "14m ago",
+      m3Sub: "PA broadcast check",
+      m4Val: "L. Desai (Supervisor)",
+      m4Sub: "Lost & Found Lead",
+      tooltipTitle: "Info Desk #01",
+      tooltipStatus: "Staffed",
+      tooltipDesc: "Central Plaza • Multilingual guidance & Lost property desk"
+    },
+    'info_04': {
+      name: "Info Help Desk #04",
+      location: "West Concourse Approach",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Staffing Level",
+      m1Val: "3 / 3",
+      m1Sub: "Desk Staff",
+      barWidth: "100%",
+      barColor: "bg-amber-500",
+      m2Label: "Daily Inquiries",
+      m2Val: "1,240",
+      m2Unit: "cases",
+      m2Sub: "Nominal resolution speed",
+      m3Val: "19m ago",
+      m3Sub: "Shift change completed",
+      m4Val: "G. Menon (Staff)",
+      m4Sub: "Station 4 Lead",
+      tooltipTitle: "Info Desk #04",
+      tooltipDesc: "West concourse visitor helpdesk & tactile venue guides",
+      tooltipStatus: "Staffed"
+    },
+    'san_03': {
+      name: "Sanitation Block #03",
+      location: "Southeast Hub Utilities",
+      status: "ROUTINE CHECK",
+      statusColor: "text-slate-700 bg-slate-100 border border-slate-300",
+      m1Label: "Operating Cubicles",
+      m1Val: "22 / 24",
+      m1Sub: "2 in sanitize",
+      barWidth: "90%",
+      barColor: "bg-slate-500",
+      m2Label: "Greywater Drainage",
+      m2Val: "180",
+      m2Unit: "L/min",
+      m2Sub: "Sub-pump nominal",
+      m3Val: "7m ago",
+      m3Sub: "Routine cleaning cycle",
+      m4Val: "D. Chauhan",
+      m4Sub: "Utility Crew #3",
+      tooltipTitle: "Sanitation Block #03",
+      tooltipStatus: "Routine Check",
+      tooltipDesc: "Southeast facility • 2 units in cycle cleaning, 22 units active"
+    },
+    'san_01': {
+      name: "Sanitation Block #01",
+      location: "Northwest Concourse",
+      status: "OPERATIONAL",
+      statusColor: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+      m1Label: "Operating Cubicles",
+      m1Val: "30 / 30",
+      m1Sub: "100%",
+      barWidth: "100%",
+      barColor: "bg-slate-500",
+      m2Label: "Water Tank Inflow",
+      m2Val: "210",
+      m2Unit: "L/min",
+      m2Sub: "Constant pressure",
+      m3Val: "16m ago",
+      m3Sub: "Cycle inspect passed",
+      m4Val: "H. Patel",
+      m4Sub: "Utility Crew #1",
+      tooltipTitle: "Sanitation Block #01",
+      tooltipStatus: "All Units Open",
+      tooltipDesc: "Northwest sector • High volume sanitation block online"
+    }
+  };
+
+  // POI Selection & Inspector Update
+  function selectPOI(id) {
+    const data = poiData[id];
+    if (!data) return;
+
+    // Update Inspector Card
+    document.getElementById('inspected-name').textContent = data.name;
+    document.getElementById('inspected-loc').textContent = data.location;
+    
+    const badge = document.getElementById('inspected-badge');
+    badge.className = `inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-bold uppercase ${data.statusColor}`;
+    badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-current"></span> ${data.status}`;
+
+    document.getElementById('inspected-metric-1').textContent = data.m1Val;
+    const bar = document.getElementById('inspected-bar');
+    bar.style.width = data.barWidth;
+    bar.className = `h-full rounded-full transition-all duration-300 ${data.barColor}`;
+
+    document.getElementById('inspected-metric-2').textContent = data.m2Val;
+    document.getElementById('inspected-metric-3').textContent = data.m3Val;
+    document.getElementById('inspected-metric-4').textContent = data.m4Val;
+
+    // Update map tooltip overlay
+    document.getElementById('tooltip-title').textContent = data.tooltipTitle;
+    document.getElementById('tooltip-status').textContent = data.tooltipStatus;
+    document.getElementById('tooltip-desc').textContent = data.tooltipDesc;
+
+    // Highlight selected item in ledger list
+    document.querySelectorAll('.poi-item').forEach(el => {
+      if (el.getAttribute('data-poi-id') === id) {
+        el.classList.add('bg-blue-50', 'border-blue-200');
+        el.classList.remove('bg-slate-50', 'border-slate-200');
+      } else {
+        el.classList.remove('bg-blue-50', 'border-blue-200');
+        el.classList.add('bg-slate-50', 'border-slate-200');
+      }
+    });
+  }
+
+  // Layer Visibility Toggling
+  function toggleLayer(layerKey) {
+    const isChecked = document.getElementById(`layer-${layerKey}`).checked;
+    
+    if (layerKey === 'roads') {
+      const roadGroup = document.getElementById('roads-group');
+      if (roadGroup) roadGroup.style.opacity = isChecked ? '1' : '0';
+      return;
+    }
+
+    const pinClass = `poi-${layerKey}`;
+    const pins = document.querySelectorAll(`.${pinClass}`);
+    pins.forEach(pin => {
+      pin.style.display = isChecked ? 'flex' : 'none';
+    });
+  }
+
+  // POI List Search Filter
+  function filterPOIList() {
+    const input = document.getElementById('poi-search-input').value.toLowerCase();
+    const items = document.querySelectorAll('.poi-item');
+    items.forEach(item => {
+      const name = item.getAttribute('data-name').toLowerCase();
+      item.style.display = name.includes(input) ? 'flex' : 'none';
+    });
+  }
+
+  // Quick Action feedback
+  function triggerRestock() {
+    const target = document.getElementById('inspected-name').textContent;
+    alert(`[DISPATCH LOG]: Restock order sent for ${target}. Tanker priority code 2.`);
+  }
+
+  function triggerDispatch() {
+    const target = document.getElementById('inspected-name').textContent;
+    alert(`[MAINTENANCE LOG]: Nearest technical maintenance crew routed to ${target}.`);
+  }
+</script></main></div>
+
+</body></html>
